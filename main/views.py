@@ -2,4 +2,8 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'main/home.html')
+    context={
+        'judul':'kuliah pak huda',
+        'kontributor':'Iftah Nur Fadlilah',
+    }
+    return render(request, 'base.html',context)
