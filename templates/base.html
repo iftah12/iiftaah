@@ -13,11 +13,21 @@
   {% block content %}
   {% endblock content %}
   <h1>Selamat Datang</h1>
-  <h2>{{kontributor}}</h2>
-  <ul>
-      <li><a href="/">Home</a> </li>
-      <li><a href="/register/">Registrasi</a> </li>
-  </ul>
+  <h2>{{nama}}</h2>
+  <h2>{{nim}}</h2>
+  <h2>Registrasi</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    <label>Nama</label>
+    <input type="text" name="nama" id="nama">
+    <br>
+    <label>Nim</label>
+    <input type="text" name="nim" id="nim">
+    <br>
+    <button type="submit">Daftar</button>
+  </form>
+
 </body>
 
 </html>
