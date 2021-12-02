@@ -19,11 +19,9 @@
 
   <form method="post">
     {% csrf_token %}
-    <label>Nama</label>
-    <input type="text" name="nama" id="nama">
-    <br>
-    <label>Nim</label>
-    <input type="text" name="nim" id="nim">
+    <table>
+      {{contact_form.as_table}}
+    </table>
     <br>
     <button type="submit">Daftar</button>
   </form>

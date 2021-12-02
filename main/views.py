@@ -1,10 +1,11 @@
 from django.shortcuts import render
-
+from .form import ContactForms
 
 def home(request):
+    contact_form = ContactForms()
     context={
         'judul':'kuliah pak huda',
-        'kontributor':'Iftah Nur Fadlilah',
+        'contact_form': contact_form
     }
     if request.method=='POST':
         print('ini method post')
