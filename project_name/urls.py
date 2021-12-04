@@ -20,6 +20,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+<<<<<<< HEAD
     path('register/', include('register.urls')),
     path('create/', views.create, name='create'),
+=======
+    path('register/', include('register.urls'))
+>>>>>>> 5963055aed21bda61510648b8bf23ea77affa2f5
 ]

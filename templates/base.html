@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{{judul}}</title>
+<<<<<<< HEAD
 </head>
 
 <body>
@@ -13,6 +14,28 @@
       <h3>{{isi.nama}}</h3>
       <h3>{{isi.nim}}</h3>
   {% endfor %}
+=======
+  {% block meta %}
+  {% endblock meta %}
+</head>
+
+<body>
+  {% block content %}
+  {% endblock content %}
+  <h1>Selamat Datang</h1>
+  <h2>{{nama}}</h2>
+  <h2>{{nim}}</h2>
+  <h2>Registrasi</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      {{contact_form.as_table}}
+    </table>
+    <br>
+    <button type="submit">Daftar</button>
+  </form>
+>>>>>>> 5963055aed21bda61510648b8bf23ea77affa2f5
 
 </body>
 
