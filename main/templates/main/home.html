@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block meta %}
+<title>Hello, world!</title>
 {% endblock meta %}
 
 {% block content %}
+    {% for isi in data %}
+        <h3>{{isi.nama}}</h3>
+        <h3>{{isi.nim}}</h3>
+    {% endfor %}
 {% endblock content %}

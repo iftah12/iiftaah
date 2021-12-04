@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{judul}}</title>
+  {% block meta %}
+  {% endblock meta %}
+</head>
+
+<body>
+  {% block content %}
+  {% endblock content %}
+  <h1>Selamat Datang</h1>
+  <h2>Input Data</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      {{contact_form.as_table}}
+    </table>
+    <br>
+    <button type="submit">Daftar</button>
+  </form>
+
+</body>
+
+</html>
